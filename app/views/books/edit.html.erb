@@ -2,6 +2,20 @@
   <h1 class="heading">Editing Book</h1>
 </div>
 
+<div class="error-box">
+    <% if @edit_book.errors.any? %>
+
+      <h2 class="error-title"><%= @edit_book.errors.count %> errors prohibited this book from being saved:</h2>
+
+      <ul class="error-message">
+        <% @edit_book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+
+    <% end %>
+  </div>
+
 <%= form_with model: @edit_book do |f| %>
 
   <div class="field">
