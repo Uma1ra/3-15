@@ -7,7 +7,7 @@ class BooksController < ApplicationController
   end
   
   def index
-    @index_books = Book.all
+    @index_books = Book.all.order("id")
     @new_book = Book.new
   end
 
@@ -20,6 +20,9 @@ class BooksController < ApplicationController
   end
   
   def update
+    update_book = Book.find(params[:id])
+    update_book.update(book_params)
+    redirect_to book_path(update_book.id)
   end
   
   def destroy
