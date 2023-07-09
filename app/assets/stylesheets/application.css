@@ -42,7 +42,7 @@ body a:hover {
   color: white;
 }
 
-.top-content p{
+.top-content p, .show-content p, .flash-message {
   margin: 33px 33px;
 }
 
@@ -86,4 +86,12 @@ input[type="submit"] {
 
 .edit-heading {
   margin-bottom: 17px;
+}
+
+.flash-message {
+  color: #008000;
+}
+
+.show-content {
+  
 }
