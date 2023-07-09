@@ -30,9 +30,9 @@
 <div class="new-form">
   <h2 class="new-heading">New book</h2>
 
-  <div class="error-box">
-    <% if @new_book.errors.any? %>
 
+  <% if @new_book.errors.any? %>
+    <div class="error-box">
       <h2 class="error-title"><%= @new_book.errors.count %> errors prohibited this book from being saved:</h2>
 
       <ul class="error-message">
@@ -40,9 +40,9 @@
           <li><%= message %></li>
         <% end %>
       </ul>
+    </div>
+  <% end %>
 
-    <% end %>
-  </div>
 
   <%= form_with model: @new_book do |f| %>
 
@@ -50,7 +50,7 @@
       <p>Title</p>
       <%= f.text_field :title %>
     </div>
-    
+
     <div class="input-field">
       <p>Body</p>
       <%= f.text_area :body %>

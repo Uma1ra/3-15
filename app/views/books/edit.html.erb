@@ -2,9 +2,9 @@
   <h1 class="edit-heading">Editing Book</h1>
 </div>
 
-<div class="error-box">
-    <% if @edit_book.errors.any? %>
 
+  <% if @edit_book.errors.any? %>
+    <div class="error-box">
       <h2 class="error-title"><%= @edit_book.errors.count %> errors prohibited this book from being saved:</h2>
 
       <ul class="error-message">
@@ -12,9 +12,8 @@
           <li><%= message %></li>
         <% end %>
       </ul>
-
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 
 <%= form_with model: @edit_book do |f| %>
 
