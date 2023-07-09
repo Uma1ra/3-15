@@ -19,19 +19,54 @@
   box-sizing: border-box;
 }
 
-h1, h2, h4, p, span,a {
+body {
   font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 0.8em;
+  line-height: 18px;
+}
+
+a {
+  color: #000000;
+  display: inline-block;
+  
+}
+
+a:visited {
+  color: #666666;
+}
+
+body a:hover {
+  background-color: #000000;
+  color: white;
 }
 
 .top-page {
-  margin: 30px;
+  margin: 33px;
+  color: #333333;
+}
+
+.top-headline {
+  letter-spacing: 0.29px;
 }
 
 .top-content p{
-  margin: 30px;
+  margin: 33px 33px;
+  font-size: 13px;
 }
 
-.top-link {
-  margin: 30px;
+.top-link a {
+  margin-left: 33px;
   color: #666666;
-} 
+}
+
+.links {
+  font-size: 13px;
+}
+
+.heading {
+  margin: 33px;
+}
+
+.index-table {
+  width: 70%;
+}
